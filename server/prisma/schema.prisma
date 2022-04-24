@@ -65,3 +65,10 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model Ticket {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  price     Float
+  updatedAt DateTime @updatedAt
+}

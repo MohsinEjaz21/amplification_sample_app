@@ -25,6 +25,10 @@ import { ProductList } from "./product/ProductList";
 import { ProductCreate } from "./product/ProductCreate";
 import { ProductEdit } from "./product/ProductEdit";
 import { ProductShow } from "./product/ProductShow";
+import { TicketList } from "./ticket/TicketList";
+import { TicketCreate } from "./ticket/TicketCreate";
+import { TicketEdit } from "./ticket/TicketEdit";
+import { TicketShow } from "./ticket/TicketShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -44,7 +48,7 @@ const App = (): React.ReactElement => {
   return (
     <div className="App">
       <Admin
-        title={"Sample app-1"}
+        title={"Sample app-2"}
         dataProvider={dataProvider}
         authProvider={jwtAuthProvider}
         theme={theme}
@@ -85,6 +89,13 @@ const App = (): React.ReactElement => {
           edit={ProductEdit}
           create={ProductCreate}
           show={ProductShow}
+        />
+        <Resource
+          name="Ticket"
+          list={TicketList}
+          edit={TicketEdit}
+          create={TicketCreate}
+          show={TicketShow}
         />
       </Admin>
     </div>
